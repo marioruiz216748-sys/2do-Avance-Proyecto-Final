@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Backoffice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="barra">
+        <h1>Backoffice</h1>
+        <button id="btnSalir" type="button">Cerrar sesión</button>
+    </header>
+
+    <main class="contenido">
+        <h2>Mis proyectos</h2>
+
+        <button id="btnAgregar" type="button">Agregar proyecto</button>
+
+        <section id="formularioProyecto" class="tarjeta oculto">
+            <h3>Nuevo proyecto</h3>
+            <form id="formProyecto">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" required>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" required></textarea>
+
+                <label for="tecnologias">Tecnologías:</label>
+                <input type="text" id="tecnologias" placeholder="HTML, CSS, JavaScript">
+
+                <label for="repositorio">Repositorio:</label>
+                <input type="url" id="repositorio" placeholder="https://github.com/...">
+
+                <button type="submit">Guardar</button>
+                <button id="btnCancelar" class="gris" type="button">Cancelar</button>
+            </form>
+        </section>
+
+        <p id="mensaje" class="mensaje" aria-live="polite"></p>
+
+        <section id="listaProyectos" class="proyectos">
+            <p>Cargando proyectos...</p>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
